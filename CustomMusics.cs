@@ -1,7 +1,6 @@
 ﻿using RiskOfTerraria.Content.CustomBosses;
 using System.Linq;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Debug = RiskOfTerraria.Content.Debug;
 
@@ -54,7 +53,7 @@ namespace RiskOfTerraria
                 }
             }
         }
-
+        // музыка для биомов
         public class PriorityEnvironment : ModSceneEffect
         {
             public override bool IsSceneEffectActive(Player player)
@@ -79,13 +78,36 @@ namespace RiskOfTerraria
                     }
                     // Указываем путь к нашему музыкальному файлу
 
-                    
+
+                    return base.Music;
+                }
+            }
+        }
+        // музыка для босса 
+        public class PriorityCustomBossMusic : ModSceneEffect
+        {
+            public override bool IsSceneEffectActive(Player player)
+            {
+                return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active);
+            }
+
+            public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
+
+            public override int Music
+            {
+                get
+                {
+                    if (Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active))
+                    {
+                        return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/CustomColossMusic");
+                    }
+
                     return base.Music;
                 }
             }
         }
 
-        
+
     }
 }
 

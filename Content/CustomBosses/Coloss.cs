@@ -1,8 +1,8 @@
 ﻿
-using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RiskOfTerraria.Content.Items.BossAccessoiry;
+using System.Linq;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -12,9 +12,10 @@ namespace RiskOfTerraria.Content.CustomBosses
 {
     public class Coloss : ModNPC
     {
+        public override string BossHeadTexture => "Content/CustomBosses/ColossHeadOnMap";
         private Vector2 _targetPosition;
         private float _moveSpeed = 2f;
-        private int attackCooldown = 0;
+
         private bool _shouldJump = false;
 
         public override void SetDefaults()
@@ -125,10 +126,10 @@ namespace RiskOfTerraria.Content.CustomBosses
         }
         // дропчик с босса 
 
-        public override void ModifyNPCLoot(NPCLoot npcLoot) 
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-			npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LivingCore>()));
-		}
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LivingCore>()));
+        }
 
         public override void BossLoot(ref string name, ref int potionType)
         {
@@ -138,9 +139,9 @@ namespace RiskOfTerraria.Content.CustomBosses
 
     }
 
-    
 
-   
+
+
     // предмет спавна босса 
     public class ColossSpawnItem : ModItem
     {
@@ -179,7 +180,7 @@ namespace RiskOfTerraria.Content.CustomBosses
 
         public override bool? UseItem(Player player)
         {
-            
+
             NPC.SpawnBoss((int)player.Center.X - 200, (int)player.Center.Y - 200, ModContent.NPCType<Coloss>(), player.whoAmI);
             return true;
         }

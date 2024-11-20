@@ -7,7 +7,7 @@ Items: {
 	}
 
 	energyKatana: {
-		DisplayName: energy Katana
+		DisplayName: Energy Katana
 		Tooltip: Katana is not stable, press Mouse Right Click having fallen stars in the inventory, for a one-time jerk, spends 1 star.
 	}
 
@@ -35,6 +35,16 @@ Items: {
 		DisplayName: Living Core
 		Tooltip: holding it in your hands, you feel the heat of life, making your heart become stronger... (increases health by 150, regeneration by 20, protection by 10)
 	}
+
+	EnergyKatana: {
+		DisplayName: Energy Katana
+		Tooltip: ""
+	}
+
+	monsterTeeth: {
+		DisplayName: monster Teeth
+		Tooltip: ""
+	}
 }
 
 Buffs: {
@@ -49,5 +59,9 @@ Buffs: {
 	}
 }
 
-NPCs.Coloss.DisplayName: Big Stone Titan
+NPCs: {
+	Coloss.DisplayName: Big Stone Titan
+	TethEffect.DisplayName: Teth Effect
+}
+
 Projectiles.LargeBoulder.DisplayName: Large Boulder

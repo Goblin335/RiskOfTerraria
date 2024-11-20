@@ -1,8 +1,7 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 
 namespace RiskOfTerraria.Content.CustomBosses
@@ -43,7 +42,7 @@ namespace RiskOfTerraria.Content.CustomBosses
         public override void AI()
         {
             // Добавляем вращение камня
-            Projectile.rotation += 0.1f * (float)Projectile.direction;
+            Projectile.rotation += 0.1f * Projectile.direction;
 
             // Создаем эффект пыли при движении
             if (Main.rand.NextBool(3))
@@ -60,10 +59,10 @@ namespace RiskOfTerraria.Content.CustomBosses
             {
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Stone);
             }
-            
+
         }
 
-       
+
     }
 
 }

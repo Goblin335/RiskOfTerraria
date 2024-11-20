@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
-namespace RiskOfTerraria.Content.Items.WearponMelee
+namespace RiskOfTerraria.Content.Items.WeaponMelee
 {
     public class energyKatana : ModItem
     {
@@ -27,6 +26,7 @@ namespace RiskOfTerraria.Content.Items.WearponMelee
             Item.material = true;
             Item.maxStack = 1;
             Item.material = true;
+            Item.useTurn = true;
         }
         public override void AddRecipes()
         {

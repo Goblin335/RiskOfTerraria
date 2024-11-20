@@ -1,10 +1,9 @@
-﻿using System;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace RiskOfTerraria.Content.Items
 {
-    
+
     public class PlayerModding : ModPlayer
     {
 
@@ -12,7 +11,7 @@ namespace RiskOfTerraria.Content.Items
         public static double clearPrecentDamage;
         public static int num = 0;
 
-        
+
         // Индексы 3–9 содержат аксессуары, а индексы 13–19 — социальные аксессуары.
         public Item[] armor = new Item[20];
 
@@ -100,5 +99,5 @@ namespace RiskOfTerraria.Content.Items
             }
         }
     }
-    
+
 }
