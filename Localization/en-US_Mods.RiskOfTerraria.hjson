@@ -1,0 +1,53 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	sharpDagger: {
+		DisplayName: Sharp dagger
+		Tooltip: "The more health the enemy has and the number of accessories up to 10 pcs, the more damage you will deal. "
+	}
+
+	energyKatana: {
+		DisplayName: energy Katana
+		Tooltip: Katana is not stable, press Mouse Right Click having fallen stars in the inventory, for a one-time jerk, spends 1 star.
+	}
+
+	HuntersBow: {
+		DisplayName: Hunters Bow
+		Tooltip: Releasing arrows, the bow will try to help you by shooting arrows at any living creature that it sees...
+	}
+
+	StrangeSyringe: {
+		DisplayName: Strange Syringe
+		Tooltip: Increases the attack speed by 15% for each item to 5 pcs
+	}
+
+	RabbitLeg: {
+		DisplayName: Rabbit Leg
+		Tooltip: Increases movement speed by 20% to 10 pcs. (Does not match the speed from the shoe [Bug])
+	}
+
+	ColossSpawnItem: {
+		DisplayName: Coloss Spawn Item
+		Tooltip: You feel the burning life inside
+	}
+
+	LivingCore: {
+		DisplayName: Living Core
+		Tooltip: holding it in your hands, you feel the heat of life, making your heart become stronger... (increases health by 150, regeneration by 20, protection by 10)
+	}
+}
+
+Buffs: {
+	CustomBuff: {
+		DisplayName: sharp
+		Description: you ready to cut everyone
+	}
+
+	Sharp: {
+		DisplayName: sharp
+		Description: you ready to cut everyone
+	}
+}
+
+NPCs.Coloss.DisplayName: Big Stone Titan
+Projectiles.LargeBoulder.DisplayName: Large Boulder

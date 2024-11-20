@@ -1,0 +1,3 @@
+displayName = Risk of Terraria
+author = Goblin335
+version = 0.1
