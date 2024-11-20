@@ -1,11 +1,10 @@
-﻿using RiskOfTerraria.Content;
-using System;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace RiskOfTerraria.Content.Items
+namespace RiskOfTerraria.Content.Items.WearponMelee
 {
     public class energyKatana : ModItem
     {
@@ -85,7 +84,7 @@ namespace RiskOfTerraria.Content.Items
 
         public void KatanaDash()
         {
-            
+
             Player player = Main.LocalPlayer;
 
             // Проверка, что выбранный предмет - это energyKatana

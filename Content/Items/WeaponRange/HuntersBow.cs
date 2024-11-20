@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RiskOfTerraria.Content.Items
+namespace RiskOfTerraria.Content.Items.WeaponRange
 {
     public class HuntersBow : ModItem
     {
@@ -65,7 +65,7 @@ namespace RiskOfTerraria.Content.Items
 
         public override void HoldItem(Player player)
         {
-            
+
             if (Main.mouseLeft)
             {
                 shootCooldown++; // увеличиваем таймер выстрелов
@@ -77,7 +77,7 @@ namespace RiskOfTerraria.Content.Items
                     if (target != null)
                     {
                         // задаем параметры самонаведения, можно настроить далее
-                        Vector2 direction = (target.Center - player.Center);
+                        Vector2 direction = target.Center - player.Center;
                         direction.Normalize();
 
                         // создаем новый снаряд

@@ -1,10 +1,9 @@
-﻿using RiskOfTerraria.Content;
-using System;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RiskOfTerraria.Content.Items
+namespace RiskOfTerraria.Content.Items.Accessoiry
 {
     public class StrangeSyringe : ModItem
     {

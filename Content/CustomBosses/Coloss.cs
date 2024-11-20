@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using RiskOfTerraria.Content.Items;
+using RiskOfTerraria.Content.Items.BossAccessoiry;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
