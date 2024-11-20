@@ -1,6 +1,4 @@
-﻿
-using RiskOfTerraria.Content.SpecialCustomItemEffect;
-using Terraria;
+﻿using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -44,10 +42,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
         // эффект предмета, при убийстве любого врага, выпадает ItemID.Heart.
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            CommonDrop drop = new CommonDrop(ItemID.Heart, 1, 1, 5, 100);
             
         }
-
-        
     }
 }
