@@ -1,12 +1,11 @@
 ﻿using Terraria;
-using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-
 namespace RiskOfTerraria.Content.Items.Accessoiry
 {
-    public class monsterTeeth : ModItem
+    public class HealingStance : ModItem
     {
         public override void SetDefaults()
         {
@@ -14,14 +13,15 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.sellPrice(0, 0, 0, 80);
+            Item.sellPrice(0, 15, 80, 10);
             Item.AllowReforgeForStackableItem = true;
-            Item.value = Item.buyPrice(0, 1, 10, 8);
+            Item.value = Item.buyPrice(0, 30, 11, 5);
             Item.accessory = true;
-            Item.rare = ItemRarityID.White;
-            Item.crit = 6;
+            Item.rare = ItemRarityID.LightRed;
+            Item.crit = 4;
             Item.material = true;
-            Item.handOnSlot = 1;
+            Item.headSlot = 1;
+
         }
 
         public override void AddRecipes()
@@ -29,17 +29,22 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             Recipe recipe = CreateRecipe();
 
             _ = CreateRecipe()
-                .AddIngredient(ItemID.AntlionMandible, 5)
+                .AddIngredient(ItemID.LifeCrystal, 4)
+                .AddIngredient(ItemID.Daybloom, 5)
+                .AddIngredient(ItemID.Mushroom, 5)
                 .AddTile(TileID.AlchemyTable)
                 .Register();
 
             // исключительно для тестов
-            recipe = CreateRecipe()
+            _ = CreateRecipe()
                 .AddIngredient(ItemID.DirtBlock, 5)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }
-        // эффект предмета, при убийстве любого врага, выпадает ItemID.Heart. расписан в файле CustomModificationLoot.cs
-
+        // эффект регенерация умноженная на 2 
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            player.lifeRegenCount *= 2;
+        }
     }
 }

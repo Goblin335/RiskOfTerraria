@@ -56,6 +56,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
         {
             player.AddBuff(ModContent.BuffType<Sharp>(), 1);
             PlayerModding.clearPrecentDamage = 1.25 * Item.stack;
+            
         }
     }
 

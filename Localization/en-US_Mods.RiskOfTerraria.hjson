@@ -43,7 +43,22 @@ Items: {
 
 	monsterTeeth: {
 		DisplayName: monster Teeth
-		Tooltip: ""
+		Tooltip: The fangs of the defeated give you strength. (A heart drops out of any slain enemy)
+	}
+
+	ArmorPlate: {
+		DisplayName: Armor Plate
+		Tooltip: it is fastened with fasteners and looks strong (increases protection by 5 for each item up to 10 pcs.)
+	}
+
+	HealingStance: {
+		DisplayName: Healing Stance
+		Tooltip: holding it in your hands makes your heart beat faster... (regeneration multiplied by 2)
+	}
+
+	PrecisionPoints: {
+		DisplayName: Precision Points
+		Tooltip: "looking at them, you see the weak points of the enemy. (increases the chance of a critical hit by 10 for each item in the stack)"
 	}
 }
 

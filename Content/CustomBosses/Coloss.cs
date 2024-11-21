@@ -13,8 +13,8 @@ namespace RiskOfTerraria.Content.CustomBosses
     public class Coloss : ModNPC
     {
         public override string BossHeadTexture => "Content/CustomBosses/ColossHeadOnMap";
-        private Vector2 _targetPosition;
-        private float _moveSpeed = 2f;
+      
+        private float _moveSpeed = 4f;
 
         private bool _shouldJump = false;
 
