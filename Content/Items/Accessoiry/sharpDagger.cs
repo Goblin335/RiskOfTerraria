@@ -17,7 +17,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             // прописывание аксессуара.
             Item.width = 20;
             Item.height = 20;
-            Item.maxStack = 10;
+            Item.maxStack = 5;
             Item.sellPrice(0, 0, 0, 20);
             Item.AllowReforgeForStackableItem = true;
             Item.value = Item.buyPrice(0, 1, 10, 8);

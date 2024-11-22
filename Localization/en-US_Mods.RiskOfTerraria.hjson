@@ -3,7 +3,7 @@
 Items: {
 	sharpDagger: {
 		DisplayName: Sharp dagger
-		Tooltip: "The more health the enemy has and the number of accessories up to 10 pcs, the more damage you will deal. "
+		Tooltip: "The more health the enemy has and the number of accessories up to 5 pcs, the more damage you will deal. "
 	}
 
 	energyKatana: {
@@ -58,7 +58,22 @@ Items: {
 
 	PrecisionPoints: {
 		DisplayName: Precision Points
-		Tooltip: "looking at them, you see the weak points of the enemy. (increases the chance of a critical hit by 10 for each item in the stack)"
+		Tooltip: looking at them, you see the weak points of the enemy. (increases the chance of a critical hit by 10 for each item in the stack)
+	}
+
+	ScytheOfLife: {
+		DisplayName: Scythe Of Life
+		Tooltip: hit the weak point of the enemy and cut off the remnants of his forces, sewing up his wounds with them
+	}
+
+	IceGuardianSpawnItem: {
+		DisplayName: Ice Guardian Spawn Item
+		Tooltip: "This crystal is so fragile..."
+	}
+
+	IceHeart: {
+		DisplayName: Ice Heart
+		Tooltip: "your mind has become cold and calculating, but your body has become as fragile as ice..."
 	}
 }
 
@@ -77,6 +92,7 @@ Buffs: {
 NPCs: {
 	Coloss.DisplayName: Big Stone Titan
 	TethEffect.DisplayName: Teth Effect
+	IceGuardian.DisplayName: Ice Guardian
 }
 
 Projectiles.LargeBoulder.DisplayName: Large Boulder

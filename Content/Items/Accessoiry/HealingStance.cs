@@ -29,7 +29,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             Recipe recipe = CreateRecipe();
 
             _ = CreateRecipe()
-                .AddIngredient(ItemID.LifeCrystal, 4)
+                .AddIngredient(ItemID.LifeCrystal, 5)
                 .AddIngredient(ItemID.Daybloom, 5)
                 .AddIngredient(ItemID.Mushroom, 5)
                 .AddTile(TileID.AlchemyTable)

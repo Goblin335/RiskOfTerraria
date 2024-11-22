@@ -27,6 +27,8 @@ namespace RiskOfTerraria
             // музыка для боссов
             //
             MusicLoader.AddMusic(ModID, "Content/Music/CustomColossMusic");
+
+            MusicLoader.AddMusic(ModID, "Content/Music/IceGuardianFite");
         }
 
         public class PriorityBiomeHigh : ModSceneEffect
@@ -88,7 +90,7 @@ namespace RiskOfTerraria
         {
             public override bool IsSceneEffectActive(Player player)
             {
-                return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active);
+                return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active || Main.npc.Any(n => n.type == ModContent.NPCType<IceGuardian>() && n.active));
             }
 
             public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
@@ -100,6 +102,10 @@ namespace RiskOfTerraria
                     if (Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active))
                     {
                         return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/CustomColossMusic");
+                    }
+                    else if(Main.npc.Any(n => n.type == ModContent.NPCType<IceGuardian>() && n.active)) 
+                    {
+                        return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/IceGuardianFite");
                     }
 
                     return base.Music;
