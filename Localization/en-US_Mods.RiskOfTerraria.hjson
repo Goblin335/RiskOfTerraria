@@ -68,12 +68,17 @@ Items: {
 
 	IceGuardianSpawnItem: {
 		DisplayName: Ice Guardian Spawn Item
-		Tooltip: "This crystal is so fragile..."
+		Tooltip: This crystal is so fragile...
 	}
 
 	IceHeart: {
 		DisplayName: Ice Heart
-		Tooltip: "your mind has become cold and calculating, but your body has become as fragile as ice..."
+		Tooltip: your mind has become cold and calculating, but your body has become as fragile as ice...
+	}
+
+	СlawsОfPredator: {
+		DisplayName: СlawsОf Predator
+		Tooltip: ""
 	}
 }
 

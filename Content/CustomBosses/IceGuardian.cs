@@ -13,12 +13,22 @@ namespace RiskOfTerraria.Content.CustomBosses
     public class IceGuardian : ModNPC
     {
         private const float MoveSpeed = 6f; // Скорость передвижения босса
-        private const float RotateSpeed = 0.06f; // Скорость вращения
+
         private const int ShotsPerVolley = 5; // Количество снарядов в одной очереди
+
         private const int VolleyDelay = 120; // Задержка между очередями
+
         private float inertia = 30f; // Инерция движения босса
+
         private int volleyCounter = 0; // Счетчик очередей
+
         private bool isAttacking = false; // Флаг, показывающий, атакует ли босс в данный момент
+
+        private int projectileSpawnTimer = 0; // Таймер спавна снарядов
+
+        private int projectileSpawnDelay = 250; // Задержка между спавном снарядов (в кадрах)
+
+        private int maxProjectiles = 35; // Максимальное количество снарядов на экране
         public override void SetDefaults()
         {
             NPC.boss = true;
@@ -111,10 +121,57 @@ namespace RiskOfTerraria.Content.CustomBosses
                 volleyCounter--;
             }
 
+            
+
+            projectileSpawnTimer++;
+
+            // Условие для спавна снарядов
+            if (projectileSpawnTimer >= projectileSpawnDelay && NPC.life < NPC.lifeMax / 2)
+            {
+                spawnMissiles();
+                projectileSpawnTimer = 0; // Сбрасываем таймер
+            }
+
+            if (NPC.life < NPC.lifeMax / 2)
+            {
+                // Генерация снарядов из FrostBoltSword
+                spawnMissiles();
+            }
             // Обновляем скорость босса, даже если он атакует
             NPC.velocity = targetDirection * MoveSpeed; // Поддержка скорости в сторону игрока
 
         }
+
+        private void spawnMissiles()
+        {
+            if (Main.projectile.Count(p => p.active && p.hostile) >= maxProjectiles)
+            {
+                return; // Если достигнуто максимальное количество, выходим из функции
+            }
+            // Вывод отладочных сообщений
+
+            // Случайный интервал для создания снарядов
+            int spread = 40; // Расстояние между снарядами
+            int missileSpeed = 10; // Скорость снарядов
+
+            // Снаряды с правой стороны
+            Vector2 rightPosition = NPC.Center + new Vector2(spread, 0);
+            Vector2 rightDirection = new Vector2(-1, 0);
+            int rightProj = Projectile.NewProjectile(NPC.GetSource_FromAI(), rightPosition, rightDirection * missileSpeed, ProjectileID.FrostBoltSword, 20, 0f);
+            Main.projectile[rightProj].hostile = true;
+            Main.projectile[rightProj].friendly = false;
+
+            // Задержка перед созданием следующего снаряда
+            projectileSpawnDelay = Main.rand.Next(60, 120); // Установить случайную задержку от 1 до 2 секунд (60 кадров = 1 секунда)
+
+            // Снаряды с левой стороны
+            Vector2 leftPosition = NPC.Center + new Vector2(-spread, 0);
+            Vector2 leftDirection = new Vector2(1, 0);
+            int leftProj = Projectile.NewProjectile(NPC.GetSource_FromAI(), leftPosition, leftDirection * missileSpeed, ProjectileID.FrostBoltSword, 20, 0f);
+            Main.projectile[leftProj].hostile = true;
+            Main.projectile[leftProj].friendly = false;
+        }
+
 
 
 

@@ -21,9 +21,7 @@ namespace RiskOfTerraria.Content.Items.WeaponMelee
             Item.rare = ItemRarityID.Blue;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.AllowReforgeForStackableItem = true;
             Item.crit = 20;
-            Item.material = true;
             Item.maxStack = 1;
             Item.material = true;
             Item.useTurn = true;
