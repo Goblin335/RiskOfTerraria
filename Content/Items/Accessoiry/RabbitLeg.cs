@@ -43,7 +43,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
         {
             float movementSpeedBoost = 0.20f * Item.stack;
 
-            player.accRunSpeed += movementSpeedBoost;
+            //player.accRunSpeed += movementSpeedBoost;
             player.moveSpeed += movementSpeedBoost;
         }
     }

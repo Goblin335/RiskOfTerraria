@@ -27,8 +27,8 @@ Items: {
 	}
 
 	ColossSpawnItem: {
-		DisplayName: Coloss Spawn Item
-		Tooltip: You feel the burning life inside
+		DisplayName: Piece of living earth
+		Tooltip: You feel the burning life inside (summon Titan)
 	}
 
 	LivingCore: {
@@ -67,8 +67,8 @@ Items: {
 	}
 
 	IceGuardianSpawnItem: {
-		DisplayName: Ice Guardian Spawn Item
-		Tooltip: This crystal is so fragile...
+		DisplayName: Ice Crystal
+		Tooltip: This crystal is so fragile...(summon Ice Guardian)
 	}
 
 	IceHeart: {
@@ -78,7 +78,17 @@ Items: {
 
 	СlawsОfPredator: {
 		DisplayName: СlawsОf Predator
-		Tooltip: ""
+		Tooltip: tear, leaving deep cuts and drink their blood!
+	}
+
+	TotemOfShootingSpawnItem: {
+		DisplayName: strange flower
+		Tooltip: This flower is so strong, what happens if you plant it in the ground? (summon Totem)
+	}
+
+	FlowerOfConcentration: {
+		DisplayName: Flower Of Concentration
+		Tooltip: putting its roots on your hands, you began to work faster with them, but they also wrapped around, making it difficult to move
 	}
 }
 
@@ -98,6 +108,7 @@ NPCs: {
 	Coloss.DisplayName: Big Stone Titan
 	TethEffect.DisplayName: Teth Effect
 	IceGuardian.DisplayName: Ice Guardian
+	TotemOfShooting.DisplayName: Totem Of Shooting
 }
 
 Projectiles.LargeBoulder.DisplayName: Large Boulder

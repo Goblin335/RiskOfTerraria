@@ -33,7 +33,7 @@ namespace RiskOfTerraria.Content.CustomBosses
             NPC.DeathSound = SoundID.DD2_SkeletonDeath;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.lavaImmune = true;
-
+            NPC.noGravity = false;
         }
         // имя босса
         public override void ModifyTypeName(ref string typeName)

@@ -26,9 +26,14 @@ namespace RiskOfTerraria
             //
             // музыка для боссов
             //
+            // колосс
             MusicLoader.AddMusic(ModID, "Content/Music/CustomColossMusic");
 
+            // ледяной страж
             MusicLoader.AddMusic(ModID, "Content/Music/IceGuardianFite");
+
+            // тотем стрельбы
+            MusicLoader.AddMusic(ModID, "Content/Music/TotemOfShooting");
         }
 
         public class PriorityBiomeHigh : ModSceneEffect
@@ -90,7 +95,8 @@ namespace RiskOfTerraria
         {
             public override bool IsSceneEffectActive(Player player)
             {
-                return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active || Main.npc.Any(n => n.type == ModContent.NPCType<IceGuardian>() && n.active));
+                return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active || Main.npc.Any(n => n.type == ModContent.NPCType<IceGuardian>() && n.active) ||
+                Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active));
             }
 
             public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
@@ -107,7 +113,10 @@ namespace RiskOfTerraria
                     {
                         return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/IceGuardianFite");
                     }
-
+                    else if(Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active))
+                    {
+                        return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/TotemOfShooting");
+                    }
                     return base.Music;
                 }
             }
