@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -32,14 +33,15 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.LifeCrystal, 5)
                 .AddIngredient(ItemID.Daybloom, 5)
                 .AddIngredient(ItemID.Mushroom, 5)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 100)
                 .AddTile(TileID.AlchemyTable)
                 .Register();
 
             // исключительно для тестов
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
         // эффект регенерация умноженная на 2 
         public override void UpdateAccessory(Player player, bool hideVisual)

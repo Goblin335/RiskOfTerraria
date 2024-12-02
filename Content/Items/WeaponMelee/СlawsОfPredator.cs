@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using RiskOfTerraria.Content.Items.Accessoiry;
+using RiskOfTerraria.Content.Items.SpecialCraftItem;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -36,6 +37,7 @@ namespace RiskOfTerraria.Content.Items.WeaponMelee
                 .AddIngredient(ItemID.RottenChunk, 15)
                 .AddIngredient(ItemID.Sunflower, 2)
                 .AddIngredient(ModContent.ItemType<monsterTeeth>(), 1)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 40)
                 .AddIngredient(ItemID.DaybloomSeeds, 5)
                 .AddTile(TileID.AlchemyTable)
                 .Register();
@@ -45,16 +47,17 @@ namespace RiskOfTerraria.Content.Items.WeaponMelee
                 .AddIngredient(ItemID.Vertebrae, 15) // альтернатива
                 .AddIngredient(ItemID.Sunflower, 2)
                 .AddIngredient(ModContent.ItemType<monsterTeeth>(), 1)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 40)
                 .AddIngredient(ItemID.DaybloomSeeds, 5)
                 .AddTile(TileID.AlchemyTable)
                 .Register();
 
 
             // исключительно для тестов
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

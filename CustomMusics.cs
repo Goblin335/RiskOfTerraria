@@ -96,7 +96,7 @@ namespace RiskOfTerraria
             public override bool IsSceneEffectActive(Player player)
             {
                 return Main.npc.Any(n => n.type == ModContent.NPCType<Coloss>() && n.active || Main.npc.Any(n => n.type == ModContent.NPCType<IceGuardian>() && n.active) ||
-                Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active));
+                Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active) || Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfCold>() && n.active));
             }
 
             public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
@@ -113,7 +113,7 @@ namespace RiskOfTerraria
                     {
                         return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/IceGuardianFite");
                     }
-                    else if(Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active))
+                    else if(Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfShooting>() && n.active || Main.npc.Any(n => n.type == ModContent.NPCType<TotemOfCold>() && n.active)))
                     {
                         return MusicLoader.GetMusicSlot(RiskOfTerraria.ModID, "Content/Music/TotemOfShooting");
                     }

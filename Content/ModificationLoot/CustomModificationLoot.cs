@@ -1,4 +1,5 @@
 ﻿using RiskOfTerraria.Content.Items.Accessoiry;
+using RiskOfTerraria.Content.Items.SpecialCraftItem;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -9,6 +10,7 @@ namespace RiskOfTerraria.Content.ModificationLoot
     {
         public override void OnKill(NPC npc)
         {
+            Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ModContent.ItemType<RainSegments>());
             foreach (Player player in Main.player)
             {
                 if (player.active && !player.dead && npc.Distance(player.Center) <= 1000f)

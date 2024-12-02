@@ -90,6 +90,21 @@ Items: {
 		DisplayName: Flower Of Concentration
 		Tooltip: putting its roots on your hands, you began to work faster with them, but they also wrapped around, making it difficult to move
 	}
+
+	RainSegments: {
+		DisplayName: Rain Segments
+		Tooltip: A piece of power that allows you to reach unprecedented heights...
+	}
+
+	TotemOfColdSpawnItem: {
+		DisplayName: Crystal in the snow
+		Tooltip: Strong to the touch, will it be possible to break it?
+	}
+
+	StrangeCrysstal: {
+		DisplayName: Strange Crysstal
+		Tooltip: Your body is covered with dense ice, you become stronger, but it is so hard to move, but the weapon is filled with power that exudes crystal.
+	}
 }
 
 Buffs: {
@@ -109,6 +124,7 @@ NPCs: {
 	TethEffect.DisplayName: Teth Effect
 	IceGuardian.DisplayName: Ice Guardian
 	TotemOfShooting.DisplayName: Totem Of Shooting
+	TotemOfCold.DisplayName: Totem Of Cold
 }
 
 Projectiles.LargeBoulder.DisplayName: Large Boulder

@@ -103,10 +103,10 @@ namespace RiskOfTerraria.Content.CustomBosses
                 .Register();
 
             // only for tests 
-            recipe = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //recipe = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
 
         public override bool CanUseItem(Player player)

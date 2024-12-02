@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -31,6 +32,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.CopperBar, 5)
                 .AddIngredient(ItemID.Rope, 5)
                 .AddIngredient(ItemID.GoldBar, 2)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.Anvils)
                 .Register();
 
@@ -39,6 +41,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.CopperBar, 5)
                 .AddIngredient(ItemID.Rope, 5)
                 .AddIngredient(ItemID.PlatinumBar, 2)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.Anvils)
                 .Register();
 
@@ -47,6 +50,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.TinBar, 5)
                 .AddIngredient(ItemID.Rope, 5)
                 .AddIngredient(ItemID.GoldBar, 2)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.Anvils)
                 .Register();
 
@@ -54,15 +58,16 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.TinBar, 5)
                 .AddIngredient(ItemID.Rope, 5)
                 .AddIngredient(ItemID.PlatinumBar, 2)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.Anvils)
                 .Register();
 
             // для тестов 
 
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
 
         // эффект повышение количества брони на 5 ед. За каждый предмет в стаке. 

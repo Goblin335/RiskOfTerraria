@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -31,6 +32,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             recipe.AddIngredient(ItemID.LesserHealingPotion, 5)
                   .AddIngredient(ItemID.Wood, 15)
                   .AddIngredient(ItemID.SilverBar, 2)
+                  .AddIngredient(ModContent.ItemType<RainSegments>(), 20)
                   .Register();
 
             // альтернатива серебра, вольфрам
@@ -38,13 +40,14 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             recipe.AddIngredient(ItemID.LesserHealingPotion, 5)
                   .AddIngredient(ItemID.Wood, 15)
                   .AddIngredient(ItemID.TungstenBar, 2)
+                  .AddIngredient(ModContent.ItemType<RainSegments>(), 20)
                   .Register();
 
             // исключительно для тестов
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

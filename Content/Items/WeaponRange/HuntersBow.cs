@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using RiskOfTerraria.Content.Items.SpecialCraftItem;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -40,6 +41,7 @@ namespace RiskOfTerraria.Content.Items.WeaponRange
                 .AddIngredient(ItemID.RottenChunk, 15)
                 .AddIngredient(ItemID.Gel, 30)
                 .AddIngredient(ItemID.Bunny, 1)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 50)
                 .AddTile(TileID.Anvils)
                 .Register();
             // рецепт лука охотницы для мира с кризоном
@@ -49,13 +51,14 @@ namespace RiskOfTerraria.Content.Items.WeaponRange
                 .AddIngredient(ItemID.Vertebrae, 15)
                 .AddIngredient(ItemID.Gel, 30)
                 .AddIngredient(ItemID.Bunny, 1)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 50)
                 .AddTile(TileID.Anvils)
                 .Register();
             // исключительно для тестов
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
 
         }
         // при выстреле любой стрелой, она должна самонаводится на врага, стрелы использутся из самой игры, новое придумывать не нужно.

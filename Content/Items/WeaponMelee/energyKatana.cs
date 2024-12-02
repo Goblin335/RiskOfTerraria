@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using RiskOfTerraria.Content.Items.SpecialCraftItem;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -34,6 +35,7 @@ namespace RiskOfTerraria.Content.Items.WeaponMelee
                 .AddIngredient(ItemID.Diamond, 5)
                 .AddIngredient(ItemID.Sapphire, 5)
                 .AddIngredient(ItemID.MeteoriteBar, 10)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 60)
                 .AddTile(TileID.Anvils)
                 .Register();
             // исключительно для тестов

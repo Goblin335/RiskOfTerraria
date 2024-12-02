@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -30,15 +31,16 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
                 .AddIngredient(ItemID.Cactus, 5)
                 .AddIngredient(ItemID.GlowingMushroom, 5)
                 .AddIngredient(ItemID.Daybloom, 3)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.CookingPots)
                 .Register();
 
             // only for Tests
 
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 1)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 1)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
         // эффект предмета - увеличение скорости атаки любого оружия 
         public override void UpdateAccessory(Player player, bool hideVisual)

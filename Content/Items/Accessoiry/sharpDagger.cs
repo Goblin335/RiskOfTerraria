@@ -1,3 +1,4 @@
+using RiskOfTerraria.Content.Items.SpecialCraftItem;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -39,6 +40,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.IronBar, 2);
             recipe.AddIngredient(ItemID.Glass, 5);
+            recipe.AddIngredient(ModContent.ItemType<RainSegments>(), 6);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             // свинец, в альтернативу железа
@@ -47,6 +49,7 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             recipe.AddIngredient(ItemID.LeadBar, 2);
             recipe.AddIngredient(ItemID.Glass, 5);
             recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ModContent.ItemType<RainSegments>(), 6);
             recipe.Register();
 
         }

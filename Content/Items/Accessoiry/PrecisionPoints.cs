@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -28,15 +29,16 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
             _ = CreateRecipe()
                 .AddIngredient(ItemID.Lens, 2)
                 .AddIngredient(ItemID.Fireblossom, 2)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 6)
                 .AddTile(TileID.Tables)
                 .Register();
 
             // для тестов 
 
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

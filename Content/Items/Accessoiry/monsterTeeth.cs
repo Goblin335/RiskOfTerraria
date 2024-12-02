@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -30,14 +31,15 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
 
             _ = CreateRecipe()
                 .AddIngredient(ItemID.AntlionMandible, 5)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 5)
                 .AddTile(TileID.AlchemyTable)
                 .Register();
 
             // исключительно для тестов
-            recipe = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+            //recipe = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 5)
+            //    .AddTile(TileID.WorkBenches)
+            //    .Register();
         }
         // эффект предмета, при убийстве любого врага, выпадает ItemID.Heart. расписан в файле CustomModificationLoot.cs
 

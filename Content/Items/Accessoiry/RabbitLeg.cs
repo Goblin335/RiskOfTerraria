@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RiskOfTerraria.Content.Items.SpecialCraftItem;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -27,14 +28,15 @@ namespace RiskOfTerraria.Content.Items.Accessoiry
 
             _ = CreateRecipe()
                 .AddIngredient(ItemID.Bunny, 1)
+                .AddIngredient(ModContent.ItemType<RainSegments>(), 8)
                 .AddTile(TileID.Tables)
                 .Register();
             // только для тестов 
 
-            _ = CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 1)
-                .AddTile(TileID.Tables)
-                .Register();
+            //_ = CreateRecipe()
+            //    .AddIngredient(ItemID.DirtBlock, 1)
+            //    .AddTile(TileID.Tables)
+            //    .Register();
         }
 
         // эффект предмета увеличение скорости передвижения игрока на 20% за каждый предмет до 10 шт.
